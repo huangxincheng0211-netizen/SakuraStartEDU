@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>樱启教育｜日本特定技能考试培训</title>
+  <meta name="description" content="樱启教育提供日本特定技能考试培训、习题资料、代报名协助、录播课、直播课与赴日就业支持。" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="mobile-page">
+    <header class="top-header">
+      <div class="top-brand">
+        <img src="assets/logo-cropped.png" alt="樱启教育LOGO" class="mini-logo" />
+        <div class="brand-text">
+          <strong>樱启教育</strong>
+          <span>SakuraStartEDU</span>
+        </div>
+      </div>
+      <a class="top-call" href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">咨询</a>
+    </header>
+
+    <section class="search-wrap">
+      <div class="search-bar">
+        <span class="search-icon">⌕</span>
+        <input type="text" placeholder="搜索 JFT / 农业 / 介护 / 代报名 / 就业服务" />
+      </div>
+    </section>
+
+    <section class="top-carousel" aria-label="樱启教育图片展示">
+      <div class="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="assets/banner-office.png" alt="樱启教育线下办公环境" />
+          </div>
+          <div class="carousel-slide">
+            <img src="assets/banner-logo.jpg" alt="樱启教育品牌LOGO" />
+          </div>
+        </div>
+        <button class="carousel-btn prev" type="button" aria-label="上一张" onclick="moveSlide(-1)">‹</button>
+        <button class="carousel-btn next" type="button" aria-label="下一张" onclick="moveSlide(1)">›</button>
+        <div class="carousel-dots">
+          <button type="button" class="active" aria-label="第1张" onclick="goToSlide(0)"></button>
+          <button type="button" aria-label="第2张" onclick="goToSlide(1)"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero-summary">
+      <div>
+        <span class="summary-label">日本特定技能考试</span>
+        <h1>备考学习、报名协助、课程辅导与就业支持</h1>
+        <p>围绕特定技能考试常见内容，提供专项练习、报考流程协助、录播/直播课程和赴日就业方向支持。</p>
+      </div>
+    </section>
+
+    <section class="quick-grid">
+      <a class="quick-item" href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <div class="quick-icon blue">题</div>
+        <span>习题介绍</span>
+      </a>
+      <a class="quick-item" href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <div class="quick-icon pink">报</div>
+        <span>代报名流程</span>
+      </a>
+      <a class="quick-item" href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <div class="quick-icon green">录</div>
+        <span>录播课程</span>
+      </a>
+      <a class="quick-item" href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <div class="quick-icon purple">直</div>
+        <span>直播课程</span>
+      </a>
+      <a class="quick-item" href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <div class="quick-icon orange">职</div>
+        <span>就业服务</span>
+      </a>
+
+      <a class="quick-item" href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <div class="quick-icon blue">日</div>
+        <span>JFT</span>
+      </a>
+      <a class="quick-item" href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <div class="quick-icon green">农</div>
+        <span>农业</span>
+      </a>
+      <a class="quick-item" href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <div class="quick-icon pink">介</div>
+        <span>介护业</span>
+      </a>
+      <a class="quick-item" href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <div class="quick-icon orange">建</div>
+        <span>建筑业</span>
+      </a>
+      <a class="quick-item" href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <div class="quick-icon purple">更多</div>
+        <span>更多方向</span>
+      </a>
+    </section>
+
+    <section class="tabs-card">
+      <div class="home-tabs">
+        <button class="tab-btn active" id="tab-service" onclick="showTab('service', this)">服务介绍</button>
+        <button class="tab-btn" id="tab-courses" onclick="showTab('courses', this)">课程方向</button>
+        <button class="tab-btn" id="tab-packages" onclick="showTab('packages', this)">套餐服务</button>
+        <button class="tab-btn" id="tab-contact" onclick="showTab('contact', this)">联系我们</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="panel-service">
+          <div class="section-chips">
+            <span class="chip active">热门服务</span>
+            <span class="chip">系统备考</span>
+          </div>
+
+          <article class="service-detail-card">
+            <div class="service-title-row">
+              <div class="service-icon blue">题</div>
+              <div>
+                <h3>习题介绍</h3>
+                <p>专项练习 · 巩固考点</p>
+              </div>
+            </div>
+            <div class="feature-list">
+              <div><b>题型熟悉</b><span>判断题、选择题、场景题</span></div>
+              <div><b>高频考点</b><span>高效备考，精准提分</span></div>
+              <div><b>实务理解</b><span>作业流程与现场规范</span></div>
+              <div><b>专项强化</b><span>重点难点分模块练习</span></div>
+              <div><b>考前冲刺</b><span>查漏补缺，提升效率</span></div>
+            </div>
+            <p class="service-note">适合基础薄弱、想系统刷题和巩固考点的学员。</p>
+          </article>
+
+          <article class="service-detail-card">
+            <div class="service-title-row">
+              <div class="service-icon pink">报</div>
+              <div>
+                <h3>代报名服务流程</h3>
+                <p>清晰流程 · 省心高效</p>
+              </div>
+            </div>
+            <div class="step-list">
+              <div><em>1</em><span>咨询了解</span></div>
+              <div><em>2</em><span>确认报考方向</span></div>
+              <div><em>3</em><span>提交报名资料</span></div>
+              <div><em>4</em><span>资料审核 / 协助报名</span></div>
+              <div><em>5</em><span>通知考位与考试信息</span></div>
+            </div>
+            <div class="support-box">
+              <span>协助整理资料</span>
+              <span>跟进报名进度</span>
+              <span>重要时间提醒</span>
+              <span>流程清晰可查</span>
+            </div>
+          </article>
+
+          <article class="service-detail-card">
+            <div class="service-title-row">
+              <div class="service-icon green">课</div>
+              <div>
+                <h3>录播课 / 直播课介绍</h3>
+                <p>系统学习 · 老师带学</p>
+              </div>
+            </div>
+            <div class="two-col">
+              <div class="mini-card">
+                <h4>录播课程</h4>
+                <ul>
+                  <li>随时回看</li>
+                  <li>碎片学习</li>
+                  <li>重点反复复习</li>
+                </ul>
+              </div>
+              <div class="mini-card">
+                <h4>直播课程</h4>
+                <ul>
+                  <li>老师带学</li>
+                  <li>在线答疑</li>
+                  <li>学习监督</li>
+                </ul>
+              </div>
+            </div>
+            <div class="support-box four">
+              <span>灵活学习</span>
+              <span>重点精讲</span>
+              <span>互动答疑</span>
+              <span>备考规划</span>
+            </div>
+          </article>
+
+          <article class="service-detail-card">
+            <div class="service-title-row">
+              <div class="service-icon orange">职</div>
+              <div>
+                <h3>就业服务介绍</h3>
+                <p>赴日就业方向 · 就业支持</p>
+              </div>
+            </div>
+            <div class="job-grid">
+              <div><b>岗位推荐</b><span>对接常见行业方向</span></div>
+              <div><b>简历指导</b><span>优化求职材料</span></div>
+              <div><b>面试辅导</b><span>提升沟通表达</span></div>
+              <div><b>就业答疑</b><span>常见问题说明</span></div>
+              <div><b>后续支持</b><span>入职前信息协助</span></div>
+            </div>
+            <p class="service-note">适合准备赴日就业、已在备考阶段、希望学习与就业一体化的学员。</p>
+          </article>
+
+          <div class="poster-strip-title">服务图示</div>
+          <div class="poster-strip">
+            <img src="assets/poster-exercise.png" alt="习题介绍图" />
+            <img src="assets/poster-registration.png" alt="代报名流程图" />
+            <img src="assets/poster-course.png" alt="录播直播课程介绍图" />
+            <img src="assets/poster-employment.png" alt="就业服务介绍图" />
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-courses">
+          <div class="mini-title">覆盖多个特定技能考试方向</div>
+          <div class="pill-grid">
+            <span>JFT</span>
+            <span>农业</span>
+            <span>介护业</span>
+            <span>建筑业</span>
+            <span>宿泊业</span>
+            <span>楼宇清扫业</span>
+            <span>食品加工业</span>
+            <span>出租车</span>
+            <span>卡车</span>
+            <span>渔业</span>
+            <span>航空业</span>
+          </div>
+
+          <div class="info-block">
+            <h3>学习支持内容</h3>
+            <ul>
+              <li>结合考试常见内容，进行专项练习与重点巩固</li>
+              <li>围绕高频考点，帮助学员提高备考效率</li>
+              <li>录播课程支持反复回看，直播课程支持老师带学答疑</li>
+              <li>提供报名材料整理、资料审核和考试信息提醒</li>
+              <li>提供赴日就业方向、岗位信息和求职支持说明</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-packages">
+          <div class="package-list service-package-list">
+            <article class="package-card service-package-card">
+              <div class="package-head">
+                <h3>习题套餐</h3>
+                <span>专项练习 · 巩固考点</span>
+              </div>
+              <ul>
+                <li>覆盖特定技能考试常见题型</li>
+                <li>包含判断题、选择题、场景题练习</li>
+                <li>高频考点整理与重点强化</li>
+                <li>适合基础薄弱、想系统刷题的学员</li>
+              </ul>
+              <div class="package-actions">
+                <a href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">咨询习题套餐</a>
+                <a class="buy-btn" href="https://m.tb.cn/h.RlXADabsk46N8P3" target="_blank" rel="noopener noreferrer">立即购买</a>
+              </div>
+            </article>
+
+            <article class="package-card service-package-card featured">
+              <div class="package-badge">推荐</div>
+              <div class="package-head">
+                <h3>代报名服务</h3>
+                <span>流程协助 · 资料审核</span>
+              </div>
+              <ul>
+                <li>咨询确认报考方向</li>
+                <li>协助整理报名资料</li>
+                <li>跟进报名进度与重要时间提醒</li>
+                <li>通知考位与考试相关信息</li>
+              </ul>
+              <div class="package-actions">
+                <a href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">咨询代报名</a>
+                <a class="buy-btn" href="https://m.tb.cn/h.RlXADabsk46N8P3" target="_blank" rel="noopener noreferrer">立即购买</a>
+              </div>
+            </article>
+
+            <article class="package-card service-package-card">
+              <div class="package-head">
+                <h3>课程服务</h3>
+                <span>录播课程 · 直播带学</span>
+              </div>
+              <ul>
+                <li>录播课程支持随时回看</li>
+                <li>直播课程老师带学与在线答疑</li>
+                <li>重点内容精讲与备考规划</li>
+                <li>适合需要系统学习和监督的学员</li>
+              </ul>
+              <div class="package-actions">
+                <a href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">咨询课程服务</a>
+                <a class="buy-btn" href="https://m.tb.cn/h.RlXADabsk46N8P3" target="_blank" rel="noopener noreferrer">立即购买</a>
+              </div>
+            </article>
+
+            <article class="package-card service-package-card">
+              <div class="package-head">
+                <h3>就业服务</h3>
+                <span>赴日方向 · 求职支持</span>
+              </div>
+              <ul>
+                <li>赴日就业方向说明</li>
+                <li>岗位推荐与行业信息支持</li>
+                <li>简历指导与面试辅导</li>
+                <li>入职前常见问题答疑与后续支持</li>
+              </ul>
+              <a href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">咨询就业服务</a>
+            </article>
+          </div>
+        </div>
+        
+        <div class="tab-panel" id="panel-contact">
+          <div class="contact-card" id="bottom-contact">
+            <div class="contact-top">
+              <div>
+                <h3>欢迎咨询适合你的备考方案</h3>
+                <p>微信：<strong>SakuraStartEDU</strong></p>
+                <p>电话：<strong>13646036120</strong></p>
+                <p class="tiny-note">添加微信后，可咨询考试方向、课程内容、报名流程与就业支持。</p>
+              </div>
+              <img src="assets/wechat-qr.png" alt="樱启教育微信二维码" class="qr-image" />
+            </div>
+            <div class="contact-actions">
+              <a class="primary-btn" href="tel:13646036120">拨打电话</a>
+              <button class="secondary-btn" onclick="copyWechat()">复制微信号</button>
+            </div>
+            <p id="copyTip" class="copy-tip"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mini-footer">
+      <p>© 2026 樱启教育 SakuraStartEDU</p>
+      <p>日本特定技能考试培训宣传与咨询</p>
+    </footer>
+
+    <nav class="bottom-nav">
+      <a href="#" class="active">
+        <span>⌂</span>
+        <em>首页</em>
+      </a>
+      <a href="#panel-service" onclick="showTab('service', document.querySelectorAll('.tab-btn')[0])">
+        <span>◈</span>
+        <em>服务</em>
+      </a>
+      <a href="#panel-courses" onclick="showTab('courses', document.querySelectorAll('.tab-btn')[1])">
+        <span>⌘</span>
+        <em>分类</em>
+      </a>
+      <a href="#panel-packages" onclick="showTab('packages', document.querySelectorAll('.tab-btn')[2])">
+        <span>◫</span>
+        <em>套餐</em>
+      </a>
+      <a href="#panel-contact" onclick="showTab('contact', document.querySelectorAll('.tab-btn')[3])">
+        <span>☎</span>
+        <em>咨询</em>
+      </a>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
